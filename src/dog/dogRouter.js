@@ -29,6 +29,13 @@ DogRouter
  // add delete !
 
  //maybe add a post !! 
+  //maybe add a post !! 
+.post(JsonParser, (req, res) => {
+    let addDoggy = req.body.name
+    dogStore.push(addDoggy)
+    return res.status(201).json(addDoggy)
+})
+
 
 
  module.exports = DogRouter; 

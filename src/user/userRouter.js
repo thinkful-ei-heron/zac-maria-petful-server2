@@ -8,6 +8,7 @@ const Queue = require('../queue')
 const UserRouter = express.Router(); 
 const userLine = new Queue(); 
 
+
 // Fisher-Yates Algo
 function cupidShuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -15,6 +16,13 @@ function cupidShuffle(array) {
       [array[i], array[j]] = [array[j], array[i]];
     }
   }
+
+  //Timer
+function intervalFunc() {
+    console.log('Cant stop me now!');
+  }
+  
+  setInterval(RemoveUser, 10000); // every 10 seconds
 
 
 userStore.forEach(element => userLine.enqueue(element))
