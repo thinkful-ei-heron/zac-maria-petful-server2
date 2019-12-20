@@ -20,9 +20,9 @@ Server: [Server](https://github.com/thinkful-ei-heron/zac-maria-petful-server2.g
 ### Home page 
 ![Main page](./images/main.png)
 <!-- ### Pet Page
-![Add Item](./images/main.png)
+![Add Item](./images/adopt.png) -->
 ### Adoption Page
-![Adoption](./images/main.png) -->
+![Adoption](./images/adopt.png)
 
 
 created by : Maria Danielson and Zacharia Lutz
