@@ -19,6 +19,13 @@ DogRouter
         res.status(200).json(adoptableDog)
  })
 
+ .delete((req, res) => {
+    RemoveDog = newDogLine.dequeue()
+    newCatLine.enqueue(RemoveDog)
+    return res.status(200).json(RemoveDog)
+})
+
+
  // add delete !
 
  //maybe add a post !! 

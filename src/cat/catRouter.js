@@ -20,6 +20,11 @@ CatRouter
  })
 
  // add delete !
+ .delete((req, res) => {
+     RemoveCat = newCatLine.dequeue()
+     newCatLine.enqueue(RemoveCat)
+     return res.status(200).json(RemoveCat)
+ })
 
  //maybe add a post !! 
 
