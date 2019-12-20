@@ -1,9 +1,9 @@
 // require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const DogRouter = require('./src/dog/dogRouter')
-const CatRouter = require('./src/cat/catRouter')
-const UserRouter =  require('./src/user/userRouter')
+const DogRouter = require('./dog/dogRouter')
+const CatRouter = require('./cat/catRouter')
+const UserRouter =  require('./user/userRouter')
 
 
 
