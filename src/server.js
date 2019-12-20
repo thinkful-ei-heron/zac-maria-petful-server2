@@ -1,14 +1,19 @@
-// require('dotenv').config();
+const { NODE_ENV, PORT} = require('../config');
 const express = require('express');
 const cors = require('cors');
+const helmet = require('helmet');
+const morgan = require('morgan');
 const DogRouter = require('./dog/dogRouter')
 const CatRouter = require('./cat/catRouter')
 const UserRouter =  require('./user/userRouter')
-
-
-
-
 const app = express();
+const morganOption = (NODE_ENV === 'production')
+  ? 'tiny'
+  : 'common';
+app.use(morgan(morganOption));
+
+
+
 app.use(cors()) 
 
 // app.use(cors({
@@ -54,9 +59,8 @@ app.use(function (err, req, res, next) {
 
 
 
-app.listen(process.env.PORT || 8080,()=>{
-  console.log('Listening on 8080');
+app.listen(PORT,()=>{
+  console.log(`Listening on ${PORT}`);
 });
-
 
 module.exports = app; 

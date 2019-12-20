@@ -1,26 +1,29 @@
-# Express Boilerplate!
+# App name: Petful 
 
-This is a boilerplate project used for starting new projects!
+ # About
+  This app which allows adoption of cats and dogs. These are the only two animals allowed in the shelter. The app works strictly on a "First-In, First-Out" basis according to the animals that came to the shelter first. People can adopt a cat or a dog, but they may only adopt the animal that came to the shelter first. In addition, people who want to adopt are also put in a queue so they can adopt when it's their turn.
 
-## How do set up?
+## Live page can be found here !
+### ZEIT:
+[Petful Live page](https://zac-maria-petful.now.sh//)
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
 
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+## Technoligies Used
+Client side: Reactjs, Javascript, HTML and CSS
+Server side: Express.js, Node.js
 
-## Scripts
+## Links to code 
+Client : [Client](https://github.com/thinkful-ei-heron/Zac-Maria_Petful_Client.git)
+Server: [Server](https://github.com/thinkful-ei-heron/zac-maria-petful-server2.git)
 
-Start the application `npm start`
+## Screen Shots
+### Home page 
+![Main page]()
+### Pet Page
+![Add Item]()
+### Adoption Page
+![Adoption]()
 
-Start nodemon for the application `npm run dev`
 
-Run the tests in watch mode `npm test`
+created by : Maria Danielson and Zacharia Lutz
 
-## Deploying
-
-When your new project is ready for deployment, add a new heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.

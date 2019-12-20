@@ -10,19 +10,19 @@ const userLine = new Queue();
 
 
 // Fisher-Yates Algo
-function cupidShuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-  }
+// function cupidShuffle(array) {
+//     for (let i = array.length - 1; i > 0; i--) {
+//       let j = Math.floor(Math.random() * (i + 1));
+//       [array[i], array[j]] = [array[j], array[i]];
+//     }
+//   }
 
   //Timer
-function intervalFunc() {
-    console.log('Cant stop me now!');
-  }
+// function intervalFunc() {
+//     console.log('Cant stop me now!');
+//   }
   
-  setInterval(RemoveUser, 10000); // every 10 seconds
+//   setInterval(, 10000); // every 10 seconds
 
 
 userStore.forEach(element => userLine.enqueue(element))
