@@ -6,9 +6,12 @@ const userStore = require('./users');
 const Queue = require('../queue');
 
 const UserRouter = express.Router();
-const userLine = new Queue();
 
-userStore.forEach(element => userLine.enqueue(element));
+function seedUsers() {
+  const userLine = new Queue();
+  userStore.forEach(element => userLine.enqueue(element));
+  return userLine;
+}
 
 function currentLine(userLine) {
   let currNode = userLine.first;
@@ -36,9 +39,17 @@ UserRouter
   })
 
   .post(JsonParser, (req, res) => {
-    let addUser = req.body.name;
-    userLine.enqueue(addUser);
-    return res.status(201).json(addUser);
+    if (req.body.name) {
+      let addUser = req.body.name;
+      userLine.enqueue(addUser);
+      return res.status(201).json(addUser);
+    }
+    if (req.body.reset) {
+      userLine = seedUsers(userStore);
+      return res.status(201).json(userLine);
+    }
   });
+
+let userLine = seedUsers(userStore);
 
 module.exports = UserRouter; 
