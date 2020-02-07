@@ -37,7 +37,7 @@ UserRouter
 
   .post(JsonParser, (req, res) => {
     let addUser = req.body.name;
-    userStore.push(addUser);
+    userLine.enqueue(addUser);
     return res.status(201).json(addUser);
   });
 
