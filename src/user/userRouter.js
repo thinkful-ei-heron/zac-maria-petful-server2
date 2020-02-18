@@ -34,7 +34,6 @@ UserRouter
 
   .delete((req, res) => {
     const removedUser = userLine.dequeue();
-    userLine.enqueue(removedUser);
     return res.status(200).json(removedUser);
   })
 
